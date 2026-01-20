@@ -1,0 +1,1089 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../UD3-S1-Nube/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>UD3 S2 Funciones - DIGITALIZACIÓN 25/26 IES Francisco de los Ríos</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--note:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1 7.775V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 0 1 0 2.474l-5.026 5.026a1.75 1.75 0 0 1-2.474 0l-6.25-6.25A1.752 1.752 0 0 1 1 7.775Zm1.5 0c0 .066.026.13.073.177l6.25 6.25a.25.25 0 0 0 .354 0l5.025-5.025a.25.25 0 0 0 0-.354l-6.25-6.25a.25.25 0 0 0-.177-.073H2.75a.25.25 0 0 0-.25.25ZM6 5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/></svg>');--md-admonition-icon--abstract:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.5 1.75v11.5c0 .138.112.25.25.25h3.17a.75.75 0 0 1 0 1.5H2.75A1.75 1.75 0 0 1 1 13.25V1.75C1 .784 1.784 0 2.75 0h8.5C12.216 0 13 .784 13 1.75v7.736a.75.75 0 0 1-1.5 0V1.75a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25Zm13.274 9.537v-.001l-4.557 4.45a.75.75 0 0 1-1.055-.008l-1.943-1.95a.75.75 0 0 1 1.062-1.058l1.419 1.425 4.026-3.932a.75.75 0 1 1 1.048 1.074ZM4.75 4h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1 0-1.5ZM4 7.75A.75.75 0 0 1 4.75 7h2a.75.75 0 0 1 0 1.5h-2A.75.75 0 0 1 4 7.75Z"/></svg>');--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.5 7.75A.75.75 0 0 1 7.25 7h1a.75.75 0 0 1 .75.75v2.75h.25a.75.75 0 0 1 0 1.5h-2a.75.75 0 0 1 0-1.5h.25v-2h-.25a.75.75 0 0 1-.75-.75ZM8 6a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/></svg>');--md-admonition-icon--tip:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M3.499.75a.75.75 0 0 1 1.5 0v.996C5.9 2.903 6.793 3.65 7.662 4.376l.24.202c-.036-.694.055-1.422.426-2.163C9.1.873 10.794-.045 12.622.26 14.408.558 16 1.94 16 4.25c0 1.278-.954 2.575-2.44 2.734l.146.508.065.22c.203.701.412 1.455.476 2.226.142 1.707-.4 3.03-1.487 3.898C11.714 14.671 10.27 15 8.75 15h-6a.75.75 0 0 1 0-1.5h1.376a4.484 4.484 0 0 1-.563-1.191 3.835 3.835 0 0 1-.05-2.063 4.647 4.647 0 0 1-2.025-.293.75.75 0 0 1 .525-1.406c1.357.507 2.376-.006 2.698-.318l.009-.01a.747.747 0 0 1 1.06 0 .748.748 0 0 1-.012 1.074c-.912.92-.992 1.835-.768 2.586.221.74.745 1.337 1.196 1.621H8.75c1.343 0 2.398-.296 3.074-.836.635-.507 1.036-1.31.928-2.602-.05-.603-.216-1.224-.422-1.93l-.064-.221c-.12-.407-.246-.84-.353-1.29a2.425 2.425 0 0 1-.507-.441 3.075 3.075 0 0 1-.633-1.248.75.75 0 0 1 1.455-.364c.046.185.144.436.31.627.146.168.353.305.712.305.738 0 1.25-.615 1.25-1.25 0-1.47-.95-2.315-2.123-2.51-1.172-.196-2.227.387-2.706 1.345-.46.92-.27 1.774.019 3.062l.042.19a.884.884 0 0 1 .01.05c.348.443.666.949.94 1.553a.75.75 0 1 1-1.365.62c-.553-1.217-1.32-1.94-2.3-2.768L6.7 5.527c-.814-.68-1.75-1.462-2.692-2.619a3.737 3.737 0 0 0-1.023.88c-.406.495-.663 1.036-.722 1.508.116.122.306.21.591.239.388.038.797-.06 1.032-.19a.75.75 0 0 1 .728 1.31c-.515.287-1.23.439-1.906.373-.682-.067-1.473-.38-1.879-1.193L.75 5.677V5.5c0-.984.48-1.94 1.077-2.664.46-.559 1.05-1.055 1.673-1.353V.75Z"/></svg>');--md-admonition-icon--success:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"/></svg>');--md-admonition-icon--question:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM6.92 6.085h.001a.749.749 0 1 1-1.342-.67c.169-.339.436-.701.849-.977C6.845 4.16 7.369 4 8 4a2.756 2.756 0 0 1 1.637.525c.503.377.863.965.863 1.725 0 .448-.115.83-.329 1.15-.205.307-.47.513-.692.662-.109.072-.22.138-.313.195l-.006.004a6.24 6.24 0 0 0-.26.16.952.952 0 0 0-.276.245.75.75 0 0 1-1.248-.832c.184-.264.42-.489.692-.661.103-.067.207-.132.313-.195l.007-.004c.1-.061.182-.11.258-.161a.969.969 0 0 0 .277-.245C8.96 6.514 9 6.427 9 6.25a.612.612 0 0 0-.262-.525A1.27 1.27 0 0 0 8 5.5c-.369 0-.595.09-.74.187a1.01 1.01 0 0 0-.34.398ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--warning:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575Zm1.763.707a.25.25 0 0 0-.44 0L1.698 13.132a.25.25 0 0 0 .22.368h12.164a.25.25 0 0 0 .22-.368Zm.53 3.996v2.5a.75.75 0 0 1-1.5 0v-2.5a.75.75 0 0 1 1.5 0ZM9 11a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/></svg>');--md-admonition-icon--failure:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M2.344 2.343h-.001a8 8 0 0 1 11.314 11.314A8.002 8.002 0 0 1 .234 10.089a8 8 0 0 1 2.11-7.746Zm1.06 10.253a6.5 6.5 0 1 0 9.108-9.275 6.5 6.5 0 0 0-9.108 9.275ZM6.03 4.97 8 6.94l1.97-1.97a.749.749 0 0 1 1.275.326.749.749 0 0 1-.215.734L9.06 8l1.97 1.97a.749.749 0 0 1-.326 1.275.749.749 0 0 1-.734-.215L8 9.06l-1.97 1.97a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734L6.94 8 4.97 6.03a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018Z"/></svg>');--md-admonition-icon--danger:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M9.504.43a1.516 1.516 0 0 1 2.437 1.713L10.415 5.5h2.123c1.57 0 2.346 1.909 1.22 3.004l-7.34 7.142a1.249 1.249 0 0 1-.871.354h-.302a1.25 1.25 0 0 1-1.157-1.723L5.633 10.5H3.462c-1.57 0-2.346-1.909-1.22-3.004L9.503.429Zm1.047 1.074L3.286 8.571A.25.25 0 0 0 3.462 9H6.75a.75.75 0 0 1 .694 1.034l-1.713 4.188 6.982-6.793A.25.25 0 0 0 12.538 7H9.25a.75.75 0 0 1-.683-1.06l2.008-4.418.003-.006a.036.036 0 0 0-.004-.009l-.006-.006-.008-.001c-.003 0-.006.002-.009.004Z"/></svg>');--md-admonition-icon--bug:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M4.72.22a.75.75 0 0 1 1.06 0l1 .999a3.488 3.488 0 0 1 2.441 0l.999-1a.748.748 0 0 1 1.265.332.75.75 0 0 1-.205.729l-.775.776c.616.63.995 1.493.995 2.444v.327c0 .1-.009.197-.025.292.408.14.764.392 1.029.722l1.968-.787a.75.75 0 0 1 .556 1.392L13 7.258V9h2.25a.75.75 0 0 1 0 1.5H13v.5c0 .409-.049.806-.141 1.186l2.17.868a.75.75 0 0 1-.557 1.392l-2.184-.873A4.997 4.997 0 0 1 8 16a4.997 4.997 0 0 1-4.288-2.427l-2.183.873a.75.75 0 0 1-.558-1.392l2.17-.868A5.036 5.036 0 0 1 3 11v-.5H.75a.75.75 0 0 1 0-1.5H3V7.258L.971 6.446a.75.75 0 0 1 .558-1.392l1.967.787c.265-.33.62-.583 1.03-.722a1.677 1.677 0 0 1-.026-.292V4.5c0-.951.38-1.814.995-2.444L4.72 1.28a.75.75 0 0 1 0-1.06Zm.53 6.28a.75.75 0 0 0-.75.75V11a3.5 3.5 0 1 0 7 0V7.25a.75.75 0 0 0-.75-.75ZM6.173 5h3.654A.172.172 0 0 0 10 4.827V4.5a2 2 0 1 0-4 0v.327c0 .096.077.173.173.173Z"/></svg>');--md-admonition-icon--example:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M5 5.782V2.5h-.25a.75.75 0 0 1 0-1.5h6.5a.75.75 0 0 1 0 1.5H11v3.282l3.666 5.76C15.619 13.04 14.543 15 12.767 15H3.233c-1.776 0-2.852-1.96-1.899-3.458Zm-2.4 6.565a.75.75 0 0 0 .633 1.153h9.534a.75.75 0 0 0 .633-1.153L12.225 10.5h-8.45ZM9.5 2.5h-3V6c0 .143-.04.283-.117.403L4.73 9h6.54L9.617 6.403A.746.746 0 0 1 9.5 6Z"/></svg>');--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 2.5h10.5a.75.75 0 0 1 0 1.5H1.75a.75.75 0 0 1 0-1.5Zm4 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5Zm0 5h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1 0-1.5ZM2.5 7.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 1.5 0Z"/></svg>');--md-admonition-icon--repo:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sesion-2-funciones-de-la-nube" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="DIGITALIZACIÓN 25/26 IES Francisco de los Ríos" class="md-header__button md-logo" aria-label="DIGITALIZACIÓN 25/26 IES Francisco de los Ríos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            DIGITALIZACIÓN 25/26 IES Francisco de los Ríos
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UD3 S2 Funciones
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="DIGITALIZACIÓN 25/26 IES Francisco de los Ríos" class="md-nav__button md-logo" aria-label="DIGITALIZACIÓN 25/26 IES Francisco de los Ríos" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    DIGITALIZACIÓN 25/26 IES Francisco de los Ríos
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Módulo DIGITALIZACIÓN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UD3-S1-Nube/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    UD3 S1 Nube
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    UD3 S2 Funciones
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    UD3 S2 Funciones
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-funciones-de-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2 —Funciones de la nube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Procesamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-que-ejecuta-el-computo-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1) ¿Qué “ejecuta” el cómputo en la nube?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-formas-tipicas-de-procesamiento-en-cloud-modelos-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2) Formas típicas de “procesamiento” en cloud (modelos de ejecución)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3) Propiedades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ejemplos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4) Ejemplos concretos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-almacenamiento-ficheros-copias-y-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣- Almacenamiento: ficheros, copias y bases de datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣- Almacenamiento: ficheros, copias y bases de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-almacenamiento-de-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1) Almacenamiento de ficheros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-copias-de-seguridad-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2) Copias de seguridad (backups)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bases-de-datos-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3) Bases de datos en la nube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-intercambio-de-informacion-sincronizacion-apis-mensajeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣- Intercambio de información : sincronización, APIs, mensajería
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣- Intercambio de información : sincronización, APIs, mensajería">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sincronizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1) Sincronización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-apis-interfaces-de-programacion-de-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2) APIs (Interfaces de Programación de Aplicaciones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mensajeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3) Mensajería
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ejecucion-de-aplicaciones-servicios-web-apps-corporativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣- Ejecución de aplicaciones : servicios web, apps corporativas.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣- Ejecución de aplicaciones : servicios web, apps corporativas.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-servicios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Servicios web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-aplicaciones-corporativas-apps-empresariales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2) Aplicaciones corporativas (apps empresariales)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ventajas-de-ejecutar-aplicaciones-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3) Ventajas de ejecutar aplicaciones en la nube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moodle-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Moodle &amp; Portfolio
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sesion-2-funciones-de-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sesión 2 —Funciones de la nube
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-procesamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ Procesamiento
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-que-ejecuta-el-computo-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1) ¿Qué “ejecuta” el cómputo en la nube?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-formas-tipicas-de-procesamiento-en-cloud-modelos-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2) Formas típicas de “procesamiento” en cloud (modelos de ejecución)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3) Propiedades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-ejemplos-concretos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4) Ejemplos concretos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-almacenamiento-ficheros-copias-y-bases-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣- Almacenamiento: ficheros, copias y bases de datos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2️⃣- Almacenamiento: ficheros, copias y bases de datos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-almacenamiento-de-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1) Almacenamiento de ficheros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-copias-de-seguridad-backups" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2) Copias de seguridad (backups)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-bases-de-datos-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3) Bases de datos en la nube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-intercambio-de-informacion-sincronizacion-apis-mensajeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣- Intercambio de información : sincronización, APIs, mensajería
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3️⃣- Intercambio de información : sincronización, APIs, mensajería">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-sincronizacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1) Sincronización
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-apis-interfaces-de-programacion-de-aplicaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2) APIs (Interfaces de Programación de Aplicaciones)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mensajeria" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3) Mensajería
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ejecucion-de-aplicaciones-servicios-web-apps-corporativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣- Ejecución de aplicaciones : servicios web, apps corporativas.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4️⃣- Ejecución de aplicaciones : servicios web, apps corporativas.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-servicios-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Servicios web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-aplicaciones-corporativas-apps-empresariales" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2) Aplicaciones corporativas (apps empresariales)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-ventajas-de-ejecutar-aplicaciones-en-la-nube" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3) Ventajas de ejecutar aplicaciones en la nube
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moodle-portfolio" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Moodle &amp; Portfolio
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>1️⃣-</p>
+<h2 id="sesion-2-funciones-de-la-nube">Sesión 2 —Funciones de la nube</h2>
+<blockquote>
+<p>en un sistema conectado</p>
+</blockquote>
+<p><strong>Objetivo:</strong> identificar y describir las <strong>funciones principales</strong> de la nube en escenarios reales.
+<strong>Criterio:</strong> <strong>b)</strong></p>
+<h1 id="introduccion">Introducción</h1>
+<p>La <strong>nube</strong> permite que empresas y usuarios ejecuten aplicaciones, procesen datos e intercambien información sin depender de equipos físicos propios. Gracias al  <strong>procesamiento en cloud</strong> , los recursos de cómputo (CPU, memoria, almacenamiento) se asignan de forma flexible y bajo demanda, adaptándose automáticamente a la carga real de trabajo. Esto hace posible ejecutar desde pequeñas aplicaciones hasta sistemas complejos de forma eficiente, escalable y con pago por uso, que es una de las grandes ventajas del modelo cloud frente a la informática tradicional.</p>
+<p><img alt="1768494392653" src="../image/UD3-S2-Funciones/1768494392653.png" /></p>
+<h3 id="1-procesamiento"><strong>1️⃣ Procesamiento</strong></h3>
+<blockquote>
+<p><strong>cómputo: ejecutar servicios y cargas</strong></p>
+</blockquote>
+<ul>
+<li><strong>Procesamiento / cómputo</strong> es la <strong>capacidad de ejecutar trabajo</strong> en la nube: instrucciones de un programa, cálculos, lógica de negocio, tareas automáticas, etc.</li>
+<li>Ese “trabajo” se ejecuta sobre <strong>recursos de computación</strong> (CPU, RAM y, a veces, GPU) que el proveedor te asigna bajo demanda.</li>
+<li>En cloud, el cómputo se organiza como <strong>servicios</strong> que “corren”  <strong>cargas de trabajo (workloads)</strong> .</li>
+</ul>
+<p><strong>Qué es una carga (workload)</strong>
+Una <strong>carga</strong> es cualquier cosa que “consume CPU/RAM” para hacer un trabajo:</p>
+<ul>
+<li>una web (backend) atendiendo peticiones,</li>
+<li>un script que procesa ficheros,</li>
+<li>un servicio que transforma datos,</li>
+<li>un motor que ejecuta reglas,</li>
+<li>un proceso que renderiza vídeo,</li>
+<li>una tarea programada (cada noche),</li>
+<li>un entrenamiento/inferencia de IA (si hay GPU).</li>
+</ul>
+<hr />
+<h2 id="11-que-ejecuta-el-computo-en-la-nube">1.1) ¿Qué “ejecuta” el cómputo en la nube?</h2>
+<p>A) <strong>Aplicaciones</strong> (apps)</p>
+<ul>
+<li>Una <strong>API</strong> (por ejemplo, una app de inventario).</li>
+<li>Un <strong>servidor web</strong> (Nginx/Apache) + tu código (PHP, Node, Java…).</li>
+<li>Un <strong>panel</strong> de administración interno.</li>
+</ul>
+<p><strong>Ejemplo</strong> : una tienda online que recibe 2.000 visitas en rebajas → necesitas más CPU/RAM para atender más peticiones.</p>
+<p>B) <strong>Servicios</strong> (servicios del sistema)</p>
+<ul>
+<li>Un  <strong>servidor de correo</strong> , un  <strong>servidor de autenticación</strong> , un  <strong>proxy</strong> .</li>
+<li>Un <strong>worker</strong> que se encarga de colas (jobs).</li>
+</ul>
+<p><strong>Ejemplo</strong> : un “worker” que envía emails de confirmación y genera facturas PDF.</p>
+<p>C) <strong>Tareas por lotes</strong> (batch)</p>
+<ul>
+<li>Trabajos que corren “de vez en cuando” y consumen recursos durante un rato.</li>
+</ul>
+<p><strong>Ejemplo</strong> : cada noche se recalculan estadísticas y se genera un informe.</p>
+<hr />
+<h2 id="12-formas-tipicas-de-procesamiento-en-cloud-modelos-de-ejecucion">1.2) Formas típicas de “procesamiento” en cloud (modelos de ejecución)</h2>
+<p>1) <strong>Máquinas virtuales (VMs)</strong> : “me dan una máquina”</p>
+<ul>
+<li>Ejecutas lo que quieras (SO + programas).</li>
+<li>Útil si necesitas control total.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>VM con Ubuntu + Docker para desplegar una API.</li>
+<li>VM Windows para un software legado.</li>
+</ul>
+<p>2) <strong>Contenedores</strong> : “me dan un entorno de ejecución empaquetado”</p>
+<ul>
+<li>Ejecutas imágenes (Docker) con tu app y dependencias.</li>
+<li>Muy común en despliegues modernos.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Contenedor con un backend Node + otro con una base de datos (aunque esta última suele ser mejor gestionada).</li>
+<li>Contenedor “worker” que procesa colas.</li>
+</ul>
+<p>3) <strong>Serverless / funciones</strong> : “ejecuto código cuando ocurre algo”</p>
+<ul>
+<li>No gestionas servidores; se ejecuta bajo eventos (HTTP, subida de archivo, mensaje…).</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Cuando un usuario sube una foto → función que la redimensiona.</li>
+<li>Cuando entra un pedido → función que valida y lanza un proceso.</li>
+</ul>
+<hr />
+<h2 id="13-propiedades">1.3) Propiedades</h2>
+<blockquote>
+<p>clave del procesamiento en la nube</p>
+</blockquote>
+<p><strong>Elasticidad</strong></p>
+<p>El cómputo puede <strong>subir/bajar</strong> automáticamente según demanda.</p>
+<p><strong>Ejemplo</strong> : si pasan de 50 a 500 peticiones/segundo, se crean más instancias del servicio.</p>
+<p><strong>Pago por uso</strong></p>
+<p>Pagas por  <strong>tiempo de ejecución</strong> ,  <strong>capacidad asignada</strong> , o <strong>número de invocaciones</strong> (según el modelo).</p>
+<p><strong>Ejemplo</strong> : un batch que corre 10 minutos al día cuesta mucho menos que un servidor 24/7.</p>
+<p><strong>Aislamiento</strong></p>
+<p>Cada carga corre aislada (VM/contendor/función) para evitar interferencias.</p>
+<p><strong>Ejemplo</strong> : un fallo en un servicio no debería tumbar el resto si está bien diseñado.</p>
+<hr />
+<h2 id="14-ejemplos-concretos">1.4) Ejemplos concretos</h2>
+<ol>
+<li><strong>Procesamiento de datos (ETL simple)</strong></li>
+<li>Subo un CSV a la nube → un proceso lo limpia y lo guarda en formato correcto.</li>
+<li><strong>Ejecución de una aplicación web</strong></li>
+<li>Frontend estático + backend en un servicio de cómputo que atiende peticiones.</li>
+<li><strong>Generación de PDFs</strong></li>
+<li>Cada vez que se emite una factura → una tarea genera el PDF.</li>
+<li><strong>Renderizado / conversión</strong></li>
+<li>Subo un vídeo → proceso que lo convierte a diferentes calidades.</li>
+<li><strong>Automatización programada</strong></li>
+<li>A las 02:00 → se ejecuta un job que hace copia y manda un informe.</li>
+</ol>
+<hr />
+<h1 id="2-almacenamiento-ficheros-copias-y-bases-de-datos">2️⃣- Almacenamiento: ficheros, copias y bases de datos</h1>
+<p><strong>Concepto base</strong></p>
+<p>El <strong>almacenamiento en la nube</strong> es la función que permite <strong>guardar, organizar, proteger y recuperar información</strong> sin depender de discos locales. Los datos se alojan en infraestructuras distribuidas del proveedor, accesibles a través de red, con  <strong>alta disponibilidad</strong> , <strong>replicación</strong> y <strong>escalabilidad</strong> automática. El usuario no gestiona el hardware físico; define  <strong>qué guarda</strong> , <strong>cómo se accede</strong> y <strong>qué nivel de protección</strong> necesita.</p>
+<p><img alt="1768889982456" src="../image/UD3-S2-Funciones/1768889982456.png" /></p>
+<h2 id="21-almacenamiento-de-ficheros">2.1) Almacenamiento de <strong>ficheros</strong></h2>
+<ul>
+<li>Pensado para  <strong>documentos, imágenes, vídeos, logs, copias de trabajo</strong> , etc.</li>
+<li>Acceso por <strong>URL, API o sincronización</strong> con equipos.</li>
+<li>Permite  <strong>compartición</strong> , control de permisos y versiones.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Carpeta cloud para trabajos del alumnado.</li>
+<li>Repositorio de imágenes de una web.</li>
+<li>Almacenamiento de logs de una aplicación.</li>
+</ul>
+<p><strong>Claves</strong></p>
+<ul>
+<li>Escala sin límite práctico.</li>
+<li>Acceso concurrente por muchos usuarios/servicios.</li>
+<li>Ideal para datos  <strong>no estructurados</strong> .</li>
+</ul>
+<h2 id="22-copias-de-seguridad-backups">2.2) <strong>Copias de seguridad</strong> (backups)</h2>
+<ul>
+<li>Uso del almacenamiento para <strong>proteger datos</strong> frente a borrados, fallos o ataques.</li>
+<li>Copias  <strong>programadas</strong> , <strong>versionadas</strong> y, a menudo,  <strong>geográficamente replicadas</strong> .</li>
+<li>Posibilidad de <strong>restauración puntual</strong> (a una fecha/hora concreta).</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Copia diaria de la base de datos de una aplicación.</li>
+<li>Backup automático de una máquina virtual.</li>
+<li>Historial de versiones de documentos.</li>
+</ul>
+<p><strong>Claves</strong></p>
+<ul>
+<li>Separación entre <strong>dato original</strong> y  <strong>copia</strong> .</li>
+<li>Automatización (sin intervención manual).</li>
+<li>Fundamental para  <strong>continuidad del servicio</strong> .</li>
+</ul>
+<h2 id="23-bases-de-datos-en-la-nube">2.3) <strong>Bases de datos</strong> en la nube</h2>
+<ul>
+<li>Almacenamiento <strong>estructurado</strong> (tablas, registros, relaciones).</li>
+<li>El proveedor gestiona <strong>motor, parches, copias y alta disponibilidad</strong> (en servicios gestionados).</li>
+<li>Acceso desde aplicaciones mediante credenciales.</li>
+</ul>
+<p><strong>Tipos habituales</strong></p>
+<ul>
+<li><strong>Relacionales</strong> (SQL): datos consistentes, transacciones.</li>
+<li><strong>No relacionales</strong> (NoSQL): gran volumen, flexibilidad, velocidad.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Base de datos de clientes y pedidos.</li>
+<li>Registro de usuarios y credenciales.</li>
+<li>Almacenamiento de eventos y métricas.</li>
+</ul>
+<p><img alt="1768890105302" src="../image/UD3-S2-Funciones/1768890105302.png" /></p>
+<hr />
+<h1 id="3-intercambio-de-informacion-sincronizacion-apis-mensajeria">3️⃣- <strong>Intercambio de información</strong> : sincronización, APIs, mensajería</h1>
+<p>El <strong>intercambio de información en la nube</strong> es la función que permite que  <strong>aplicaciones, servicios y usuarios se comuniquen entre sí</strong> , compartiendo datos de forma  <strong>segura, rápida y controlada</strong> , aunque estén en dispositivos o ubicaciones distintas. En cloud, esta comunicación se apoya en servicios gestionados que facilitan la  <strong>sincronización</strong> , el uso de <strong>APIs</strong> y la  <strong>mensajería</strong> , evitando dependencias directas entre sistemas.</p>
+<h2 id="31-sincronizacion">3.1) <strong>Sincronización</strong></h2>
+<ul>
+<li>Mantiene la <strong>misma información actualizada</strong> en varios dispositivos o servicios.</li>
+<li>Los cambios se  <strong>replican automáticamente</strong> .</li>
+<li>Puede ser <strong>bidireccional</strong> (todos actualizan) o  <strong>unidireccional</strong> .</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Un documento editado en casa aparece actualizado en el instituto.</li>
+<li>Fotos del móvil que se sincronizan con la nube.</li>
+<li>Configuraciones de una app replicadas en varios servidores.</li>
+</ul>
+<h2 id="32-apis-interfaces-de-programacion-de-aplicaciones">3.2) <strong>APIs (Interfaces de Programación de Aplicaciones)</strong></h2>
+<ul>
+<li>Permiten que <strong>una aplicación consuma datos o servicios de otra</strong> mediante peticiones.</li>
+<li>Funcionan como  <strong>contratos</strong> : qué se puede pedir y qué se devuelve.</li>
+<li>Normalmente usan HTTP/HTTPS y formatos como JSON.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Una app consulta una API para obtener datos de clientes.</li>
+<li>Un frontend web accede al backend mediante API.</li>
+<li>Integración con servicios externos (mapas, pagos, meteorología)</li>
+</ul>
+<p><img alt="1768890168644" src="../image/UD3-S2-Funciones/1768890168644.png" /></p>
+<h2 id="33-mensajeria">3.3) <strong>Mensajería</strong></h2>
+<ul>
+<li>Comunicación <strong>asíncrona</strong> entre servicios mediante mensajes.</li>
+<li>El emisor no espera respuesta inmediata.</li>
+<li>Se usan colas o sistemas de publicación/suscripción.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Una aplicación envía un mensaje “pedido creado”.</li>
+<li>Un servicio lo procesa más tarde (facturación, email).</li>
+<li>Registro de eventos y notificaciones.</li>
+</ul>
+<h1 id="4-ejecucion-de-aplicaciones-servicios-web-apps-corporativas">4️⃣- <strong>Ejecución de aplicaciones</strong> : servicios web, apps corporativas.</h1>
+<p>La <strong>ejecución de aplicaciones en la nube</strong> consiste en  <strong>poner en funcionamiento software directamente sobre infraestructuras cloud</strong> , permitiendo a los usuarios <strong>acceder y utilizar aplicaciones</strong> sin necesidad de instalarlas localmente o mantener servidores propios. </p>
+<ul>
+<li>Estas aplicaciones se ejecutan en centros de datos del proveedor y se consumen normalmente a través de  <strong>navegador web o clientes ligeros</strong> , garantizando disponibilidad continua y actualización centralizada.</li>
+</ul>
+<h2 id="41-servicios-web"><strong>4.1 Servicios web</strong></h2>
+<ul>
+<li>Aplicaciones accesibles mediante  <strong>navegador</strong> .</li>
+<li>El usuario solo interactúa con la interfaz; la lógica y los datos están en la nube.</li>
+<li>No requieren instalación ni mantenimiento local.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>Correo electrónico corporativo.</li>
+<li>Gestores de contenidos.</li>
+<li>Plataformas educativas online.</li>
+<li>Aplicaciones de facturación web.</li>
+</ul>
+<p>BUSCA MÁS EJEMPLOS</p>
+<h2 id="42-aplicaciones-corporativas-apps-empresariales">4.2) <strong>Aplicaciones corporativas (apps empresariales)</strong></h2>
+<ul>
+<li>Software orientado a la  <strong>gestión interna de una organización</strong> .</li>
+<li>Centralizan información y procesos.</li>
+<li>Acceso controlado por roles y permisos.</li>
+</ul>
+<p><strong>Ejemplos</strong></p>
+<ul>
+<li>ERP (gestión de ventas, compras, almacén).</li>
+<li>CRM (gestión de clientes).</li>
+<li>Herramientas de recursos humanos.</li>
+<li>Sistemas de gestión documental.</li>
+</ul>
+<h2 id="43-ventajas-de-ejecutar-aplicaciones-en-la-nube">4.3) Ventajas de ejecutar aplicaciones en la nube</h2>
+<ul>
+<li><strong>Disponibilidad</strong> : accesibles 24/7.</li>
+<li><strong>Escalabilidad</strong> : soportan más usuarios sin reinstalar nada.</li>
+<li><strong>Seguridad centralizada</strong> : control de accesos y copias.</li>
+<li><strong>Actualización continua</strong> : el proveedor mantiene el software.</li>
+</ul>
+<hr />
+<p>💻 Presentación de Google</p>
+<p>Crea una presentación en <strong>PRESENTACIONES DE GOOGLE</strong> e incrústala en tu portfolio, debéis indagar más información de la que aparece aquí completando con enlaces, imágenes, artículos, empresas, vídeos...</p>
+<ul>
+<li>Recuerda organizar bien dentro de tu carpeta DRIVE</li>
+<li>No se puede usar <strong>POWERPOINT/ LIBREOFFICE</strong></li>
+</ul>
+<p><img alt="1768890262850" src="../image/UD3-S2-Funciones/1768890262850.png" /></p>
+<h1 id="moodle-portfolio">💻 Moodle &amp; Portfolio</h1>
+<ul>
+<li>Sube el enlace actualizado tu portfolio a Moodle y, sube también la presentación en archivo PDF</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UD3-S1-Nube/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UD3 S1 Nube">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UD3 S1 Nube
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Curso 2025/26 - Antonio Marín - Contacto - pamarin@iesfranciscodelosrios.es - Licencia CC BY-NC-SA 4.0
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": "navigation.footer - content.code.copy - navigation.path - navigation.prune - navigation.top", "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
